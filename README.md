@@ -3,6 +3,8 @@
 Este fluxo em n8n automatiza a criação e publicação de conteúdos no Instagram a partir de ideias recebidas via WhatsApp.
 Ele utiliza IA (OpenAI GPT) para gerar textos e imagens, armazena os resultados no Supabase e organiza o ciclo de execução de forma totalmente automatizada.
 
+----------------------------------------------------------------------------------------------------------------
+
 🚀 Funcionalidades
 
 📲 Entrada via WhatsApp: o usuário envia o tema/assunto da publicação.
@@ -18,6 +20,8 @@ Ele utiliza IA (OpenAI GPT) para gerar textos e imagens, armazena os resultados 
 🗄️ Registro no Supabase: cada publicação é salva com metadados.
 
 🔄 Loop Automático: controle de execução com intervalos configurados.
+
+----------------------------------------------------------------------------------------------------------------
 
 📂 Estrutura do Fluxo
 
@@ -37,6 +41,8 @@ Supabase → Registra título, texto e imagem.
 
 Intervalo → Aguarda antes de continuar o ciclo.
 
+----------------------------------------------------------------------------------------------------------------
+
 🛠️ Tecnologias
 
 Tecnologia	Função
@@ -50,6 +56,8 @@ OpenAI Image API	Criação de imagens personalizadas
 Supabase	Armazenamento e banco de dados
 
 WhatsApp	Canal de entrada dos temas
+
+----------------------------------------------------------------------------------------------------------------
 
 ▶️ Como Usar
 
@@ -80,6 +88,8 @@ Produzir imagens
 Salvar no banco
 
 Deixar pronto para publicação no Instagram
+
+----------------------------------------------------------------------------------------------------------------
 
 📊 Exemplo de Saída
 
