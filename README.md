@@ -1,100 +1,136 @@
-🤖 Automação de Publicação no Instagram com n8n
+<center>
+  <h1 style="font-size:2.4em; margin-bottom:0.1em;">📸 N8N — Automação de Publicação no Instagram</h1>
+  <p style="margin-top:0.2em; font-size:1.05em; color:#555;">
+    Automação inteligente que cria e publica conteúdos no Instagram a partir de ideias recebidas via WhatsApp, integrando IA, Supabase e geração de imagens com OpenAI.
+  </p>
+  <p>
+    <a href="https://github.com/Rafael072187/N8N_Automacao_de_Publicacao_no_Instagram_com_n8n" style="background:#24292F;color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600;">
+      🔗 Repositório no GitHub
+    </a>
+  </p>
+</center>
 
-Este fluxo em n8n automatiza a criação e publicação de conteúdos no Instagram a partir de ideias recebidas via WhatsApp.
-Ele utiliza IA (OpenAI GPT) para gerar textos e imagens, armazena os resultados no Supabase e organiza o ciclo de execução de forma totalmente automatizada.
+<hr>
 
-----------------------------------------------------------------------------------------------------------------
+## 🧭 **Tabela de Conteúdos**
+- Descrição  
+- Instalação  
+- Uso  
+- Tecnologias  
+- Como contribuir  
+- Autor  
+- Observações  
 
-🚀 Funcionalidades
+---
 
-📲 Entrada via WhatsApp: o usuário envia o tema/assunto da publicação.
+## 📘 **Descrição**
+<details>
+  <summary><b>Resumo</b></summary>
+  Este projeto é um fluxo criado no **n8n** que automatiza a criação e publicação de conteúdos no **Instagram** com o apoio de **Inteligência Artificial (OpenAI GPT)**.  
+  Ele recebe temas via **WhatsApp**, gera textos e imagens automaticamente, armazena os resultados no **Supabase** e organiza o processo completo até a publicação.  
+  Ideal para **criadores de conteúdo, equipes de marketing e empresas** que desejam manter consistência e produtividade nas redes sociais.
+</details>
 
-🧠 Geração de Ideias: o fluxo usa GPT para criar diferentes ideias de conteúdo.
+---
 
-✍️ Criação de Publicações: a IA desenvolve textos prontos para postagens.
+## ⚙️ **Instalação**
+<details>
+  <summary><b>Passo a passo (Linux / macOS / Windows)</b></summary>
 
-🖼️ Geração de Imagens: criação automática de imagens com base no conteúdo.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Rafael072187/N8N_Automacao_de_Publicacao_no_Instagram_com_n8n.git
+   cd N8N_Automacao_de_Publicacao_no_Instagram_com_n8n
+Instale o n8n:
 
-☁️ Upload em Bucket: os arquivos são enviados para armazenamento.
+bash
+Copiar código
+npm install -g n8n
+Inicie o n8n:
 
-🗄️ Registro no Supabase: cada publicação é salva com metadados.
+bash
+Copiar código
+n8n start
+Importe o fluxo principal:
 
-🔄 Loop Automático: controle de execução com intervalos configurados.
+Arquivo: Automação_Publicação_Instagram.json
 
-----------------------------------------------------------------------------------------------------------------
+No painel do n8n, acesse Import Workflow e selecione o arquivo.
 
-📂 Estrutura do Fluxo
-
-WhatsApp Trigger → Recebe o tema da publicação.
-
-Criar Ideias (GPT) → Sugere ideias de conteúdo.
-
-Split Out + Loop → Processa cada ideia individualmente.
-
-Criar Publicações (GPT) → Gera textos prontos para uso.
-
-Geração de Imagem (OpenAI) → Produz artes para a publicação.
-
-Upload em Bucket → Envia as imagens para armazenamento.
-
-Supabase → Registra título, texto e imagem.
-
-Intervalo → Aguarda antes de continuar o ciclo.
-
-----------------------------------------------------------------------------------------------------------------
-
-🛠️ Tecnologias
-
-Tecnologia	Função
-
-n8n	Orquestração de automações
-
-OpenAI GPT	Geração de ideias e textos
-
-OpenAI Image API	Criação de imagens personalizadas
-
-Supabase	Armazenamento e banco de dados
-
-WhatsApp	Canal de entrada dos temas
-
-----------------------------------------------------------------------------------------------------------------
-
-▶️ Como Usar
-
-Importe o arquivo Automação_Publicação_Instagram.json no seu n8n.
-
-Configure as credenciais necessárias:
+Configure as credenciais:
 
 OpenAI API Key
 
-WhatsApp Trigger
+Supabase (URL e Chave API)
 
-Supabase
+WhatsApp Trigger (Webhook)
 
 Bucket/Storage
 
-Ative o fluxo no n8n.
+Ative o fluxo e teste com uma mensagem de tema via WhatsApp.
 
-Envie uma mensagem no WhatsApp com o tema da publicação.
+</details>
+🖥️ Uso
+<details> <summary><b>Como usar o projeto</b></summary>
+O usuário envia uma mensagem no WhatsApp com o tema da publicação.
 
-O fluxo vai:
+O n8n aciona o fluxo que:
 
-Gerar ideias
+Gera ideias de postagens via GPT;
 
-Criar textos
+Cria textos e descrições otimizadas;
 
-Produzir imagens
+Gera automaticamente as imagens correspondentes;
 
-Salvar no banco
+Salva o conteúdo no Supabase;
 
-Deixar pronto para publicação no Instagram
+Prepara o material para postagem no Instagram.
 
-----------------------------------------------------------------------------------------------------------------
+O sistema organiza o ciclo de execução de forma autônoma, com intervalos configuráveis.
 
-📊 Exemplo de Saída
+</details> <p align="center" style="margin-top:14px;"> <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" width="90" alt="ícone ilustrativo"> <br> <i>Fluxo automatizado para criação e publicação de postagens com IA.</i> </p>
+🛠️ Tecnologias
+<details> <summary><b>Stack principal</b></summary>
+n8n → Orquestração da automação
 
-Texto Gerado:
-"Descubra como a automação pode transformar sua produtividade!"
+OpenAI GPT → Geração de ideias e textos
 
-Imagem:
-Criada automaticamente com base no texto.
+OpenAI Image API → Criação automática de imagens
+
+Supabase → Armazenamento e banco de dados
+
+WhatsApp API → Canal de entrada para temas
+
+</details>
+🤝 Como contribuir
+<details> <summary><b>Guia rápido</b></summary>
+Faça um fork do repositório
+
+Crie uma branch:
+
+bash
+Copiar código
+git checkout -b feature/nova-feature
+Realize suas alterações e commit:
+
+bash
+Copiar código
+git commit -m "feat: adiciona nova automação de publicação"
+git push origin feature/nova-feature
+Abra um Pull Request descrevendo as melhorias.
+
+</details>
+👤 Autor
+<details> <summary><b>Contatos</b></summary> <p> <b>Rafael Bittencourt de Araújo</b> — desenvolvedor do projeto.<br> GitHub: <a href="https://github.com/Rafael072187" target="_blank">github.com/Rafael072187</a> </p> </details>
+📝 Observações
+✅ Projeto voltado à automação criativa e empresarial para marketing digital.
+🔧 Pode ser expandido para integração com outras redes (TikTok, LinkedIn).
+⚠️ Garanta a configuração correta das chaves de API e permissões antes da execução.
+
+<p align="center" style="margin-top:18px;"> <a href="https://github.com/Rafael072187/N8N_Automacao_de_Publicacao_no_Instagram_com_n8n" style="background:#0b5fff;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;"> Ver repositório </a> </p> <p align="center" style="margin-top:14px;color:#666;"> Estrutura gerada automaticamente com base no repositório analisado. </p> ```
+
+
+
+
+
+
